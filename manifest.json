@@ -1,0 +1,9 @@
+{    
+    "name": "Youtube Pause",
+    "version": "1.0", 
+    "description": "Helping you continue to interact with youtube while it thinks you are away",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+      }
+}
