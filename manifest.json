@@ -4,13 +4,16 @@
     "description": "Helping you continue to interact with youtube while it thinks you are away",
     "manifest_version": 3,
     "permissions": ["activeTab"],
-    "background": {
-        "service_worker": "background.js"
-      },
-      "icons": {
-        "16": "/images/youtube-pause.png",
-        "32": "/images/youtube-pause.png",
-        "48": "/images/youtube-pause.png",
-        "128": "/images/youtube-pause.png"
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["content.js"]
       }
+    ],
+    "icons": {
+      "16": "/images/youtube-pause.png",
+      "32": "/images/youtube-pause.png",
+      "48": "/images/youtube-pause.png",
+      "128": "/images/youtube-pause.png"
+    }
 }
